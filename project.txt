@@ -1,0 +1,35 @@
+
+            contact Management app
+
+        1.create a Angular project
+        2.Install what all libraries wanted (bootstrap and font awesome)- npm i bootstrap @fortawesome/fontawesome-free
+        3. Paste cdn link in index.html page then on;y we can able to use fontawesome
+        4. configure bootstrap anf font awesome in angular.json
+        5. configure google fonts in style.css / index.html
+        6. check all works
+        7. Create components
+            - contactManager - view all contacts
+            - addContact - add a new contact
+            - updateContact - 
+            - viewContact
+            - create page not found component
+            - create navbar - place its selector app.component.html
+        8. set up path to each component in order to view it in browser
+            -set up path in approuting.module.ts in app
+            - in app.component.html add <router-outlet></router-outlet>
+
+        9. set up server 
+            - create server folder inside project
+            - create db.json
+            - run using external server
+            -open cmd from server file
+                - create package.json file -> npm init
+                - install json-server inside server folder
+                - update package.json file as "test" to "start": "json-server --watch db.json --port 3000"
+        10. create model for contacts and group
+            - create model folder in src folder
+            - create myContacts.ts file
+            - create mygroup.ts file
+        11. create an angular service for making api call
+        12. to get http methods
+            - import httpClientModule in app.module.ts

@@ -1,0 +1,42 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1>
+
+                <i class="fa-solid fa-eye"></i>&nbsp;
+                View Contact page
+            </h1>
+            <p style="text-align: justify;">
+                This is dummy data. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Ab vel ullam pariatur laboriosam amet odit maiores, dolor nulla qui alias totam,
+                molestias perferendis possimus eum asperiores esse a earum nihil! Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Veniam aut voluptatem eveniet unde atque dolor nihil, porro autem
+                possimus, repudiandae distinctio at rem, voluptas incidunt rerum.
+                Asperiores, impedit! Eveniet, iure!
+            </p>
+
+        </div>
+    </div>
+
+    <!-- View contact details -->
+   
+    <div class="container mt-4 mb-5">
+        <div class="row border p-5 align-items-center">
+            <div class="col-md-4">
+                <img  [src]="contact.photo"
+                alt="no image" width="300px">
+                <br>
+                <a class="btn btn-warning ms-2 mt-5" routerLink="/"><i class="fa-solid fa-angles-left"></i>Go Back</a>
+            </div>
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item">Name: <b>{{contact.name}}</b></li>
+                    <li class="list-group-item">Email: <b>{{contact.email}}</b></li>
+                    <li class="list-group-item">mobile: <b>{{contact.mobile}}</b></li>
+                    <li class="list-group-item">Company: <b>{{contact.company}}</b></li>
+                    <li class="list-group-item">Title: <b>{{contact.title}}</b></li>
+                    <li class="list-group-item">Group: <b>{{groupName}}</b></li>
+                  </ul>
+            </div>
+        </div>
+    </div>
