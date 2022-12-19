@@ -20,7 +20,7 @@ export class AddContactComponent implements OnInit {
       })
     }
     addContact(){
-      this.contactName
+      
     }
 
 }
