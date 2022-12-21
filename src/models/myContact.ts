@@ -6,5 +6,5 @@ export class MyContact{
     mobile?:string
     company?:string
     title?:string
-    group?:string
+    groupId?:string
 }

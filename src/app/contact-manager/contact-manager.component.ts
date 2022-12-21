@@ -9,22 +9,38 @@ import { ApiService } from '../services/api.service';
 })
 export class ContactManagerComponent implements OnInit {
 
-  allContacts:MyContact[]=[]
-  searchKey:string=''
+  allContacts: MyContact[] = []
+  searchKey: string = ''
+  http: any;
 
-  constructor(private api:ApiService){}
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getAllContacts().subscribe((data:any)=>{
+   this.getAllContact()
+  }
+  
+  // get all contacts
+  getAllContact(){
+    this.api.getAllContacts().subscribe((data: any) => {
       console.log(data);
       this.allContacts = data
     })
   }
 
   // search
-  search(event:any){
+  search(event: any) {
     console.log(event.target.value);
     this.searchKey = event.target.value
+  }
+
+  // delete
+  deleteContact(contactId: any) {
+    return this.api.deleteContact(contactId)
+      .subscribe(
+        (data: any) => {
+          this.getAllContact()
+        }
+      )
   }
 
 }

@@ -32,7 +32,11 @@ export class ApiService {
 
   // function for adding new contact to server
   addContact(contactBody:any){
-    return this.http.get(this.baseUrl,contactBody)
+    return this.http.post(this.baseUrl,contactBody)
   }
 
+  // deleting a contact
+   deleteContact(contactId:any){
+     return this.http.delete(`${this.baseUrl}/${contactId}`)
+   }
 }
