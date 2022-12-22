@@ -21,10 +21,12 @@ export class ApiService {
   viewContact(contactId:string){
     return this.http.get(`${this.baseUrl}/${contactId}`)
   }
+
   // function to get particular group
   getGroupName(groupId:string){
     return this.http.get('http://localhost:3000/groups/'+groupId)
   }
+
   // function to fetch all groups from http://localhost:3000/groups
   getAllGroups(){
     return this.http.get('http://localhost:3000/groups')
@@ -39,4 +41,9 @@ export class ApiService {
    deleteContact(contactId:any){
      return this.http.delete(`${this.baseUrl}/${contactId}`)
    }
+
+  //  update contact
+  updateContact(contactId:any,contactBody:any){
+    return this.http.put(`${this.baseUrl}/${contactId}`,contactBody)
+  }
 }
